@@ -11,7 +11,7 @@ const Main = () => {
   const getNews = async (q) => {
     setLoading(true)
     try {
-      const res = await axios.get(`${import.meta.env.VITE_URL}${q}&apiKey=${import.meta.env.VITE_API_KEY}`)
+      const res = await axios.get(`${import.meta.env.VITE_URL}${q}&lang=en&apikey=${import.meta.env.VITE_API_KEY}`)
       const { articles } = res.data
       setdata(articles)
     } catch (error) {
@@ -36,7 +36,7 @@ const Main = () => {
         <div className="cards-container container flex">
           {
             data?.map((news, index) => {
-              return <Newscard title={news.title} source={news.source.name} image={news.urlToImage} desc={news.description} date={news.publishedAt} newsurl={news.url} key={index} />
+              return <Newscard title={news.title} source={news.source.name} image={news.image} desc={news.description} date={news.publishedAt} newsurl={news.url} key={index} />
             })
           }
         </div>

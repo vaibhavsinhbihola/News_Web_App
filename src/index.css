@@ -187,3 +187,48 @@ main {
         inset: 0
     }
 }
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .company-logo img {
+        width: auto;
+        height: 40px;
+    }
+/* 
+    .nav-links {
+        display: none;
+    } */
+
+    /* .search-bar {
+        position: sticky;
+        margin-top: 8px;
+        margin-inline: 0px;
+    } */
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 92vw;
+    }
+
+    .card-header img {
+        height: 280px;
+        width: 100vw;
+    }
+
+    .search-bar {
+        position: absolute;
+        top: 50px;
+        margin-top: 8px;
+        margin-inline: 18px;
+    }
+
+    .custom-loader-container {
+        height: 50vh;
+    }
+}
